@@ -12,6 +12,9 @@ public interface I_DatabaseAccess {
     @Query("Select * from UserData")
     List<DataModel> getAllUser();
 
+    @Query("Select * from UserData where name = :name")
+    List<String> searchuser(String name);
+
     @Insert
     void insertAll(DataModel user);
 }

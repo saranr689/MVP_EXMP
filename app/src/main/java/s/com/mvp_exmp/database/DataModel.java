@@ -1,5 +1,6 @@
 package s.com.mvp_exmp.database;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
@@ -10,6 +11,7 @@ public class DataModel {
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private Integer id;
+
 
 
     private String name;

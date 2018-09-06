@@ -31,6 +31,7 @@ public class ActionPresenterClass implements I_ActionPresenter {
     @Override
     public String retriveValues() {
 
+        new GetData().execute();
         System.out.println(this.name +" , " +   this.number);
         return this.name + ", " + this.number;
     }
@@ -73,6 +74,24 @@ public class ActionPresenterClass implements I_ActionPresenter {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             viewUpdatePresenter.disableLoadingprogress();
+        }
+    }
+
+    private class GetData extends AsyncTask<Void,Void,Void> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
         }
     }
 }
